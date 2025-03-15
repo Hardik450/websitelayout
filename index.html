@@ -1069,7 +1069,9 @@ window.addEventListener("scroll", function () {
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init(); // Initialize AOS
+  AOS.init( once: true, // Ensures animations happen only once
+    duration: 800, // Reduce animation duration
+    easing: 'ease-in-out',); // Initialize AOS
 </script>
 
 </body>
