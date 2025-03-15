@@ -19,7 +19,8 @@
 .fade-up {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; /* Optimizes performance */
 }
 
 .fade-up.visible {
@@ -81,7 +82,7 @@ button:hover {
 <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">  -->
 
 </head>
-<body data-aos-once="true">
+<body>
 
   
     
@@ -947,19 +948,23 @@ button:hover {
     document.addEventListener("DOMContentLoaded", function () {
         const fadeElements = document.querySelectorAll(".fade-up");
 
-        function handleScroll() {
-            fadeElements.forEach((element) => {
-                const rect = element.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 50) {
-                    element.classList.add("visible");
-                }
-            });
-        }
+        // Intersection Observer API for smooth performance
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            },
+            { threshold: 0.2 } // Trigger when 20% of the element is visible
+        );
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Run on page load
+        fadeElements.forEach((element) => observer.observe(element));
     });
 </script>
+
 
 
 
