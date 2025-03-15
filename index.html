@@ -948,13 +948,13 @@ button:hover {
     document.addEventListener("DOMContentLoaded", function () {
         const fadeElements = document.querySelectorAll(".fade-up");
 
-        // Intersection Observer API for smooth performance
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("visible");
-                        observer.unobserve(entry.target); // Stop observing once visible
+                    } else {
+                        entry.target.classList.remove("visible"); // Remove class when out of view
                     }
                 });
             },
@@ -964,6 +964,7 @@ button:hover {
         fadeElements.forEach((element) => observer.observe(element));
     });
 </script>
+
 
 
 
