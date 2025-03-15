@@ -214,71 +214,93 @@ button:hover {
 
 
 
-      <section class="bg-body-tertiary rounded shadow-lg" style="padding: 10px;">
-        <h3 class="text-center">Gallery</h3>
-        <div class="container text-center">
-            <div class="row g-5 justify-content-center">
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('event1.jpg');" onclick="zoomImage('event1.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('event2.jpg');" onclick="zoomImage('event2.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('event3.jpg');" onclick="zoomImage('event3.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('sports2.jpg');" onclick="zoomImage('sports2.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
+      <section class="bg-body-tertiary rounded shadow-lg p-4">
+    <h3 class="text-center mb-4">Gallery</h3>
+    <div class="container text-center">
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('event1.jpg');" onclick="zoomImage('event1.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
                 </div>
             </div>
-        </div>
-        <div class="container text-center mt-4">
-            <div class="row g-5 justify-content-center">
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('fest1.jpg');" onclick="zoomImage('fest1.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('event2.jpg');" onclick="zoomImage('event2.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
                 </div>
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('fest2.jpg');" onclick="zoomImage('fest2.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('event3.jpg');" onclick="zoomImage('event3.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
                 </div>
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('fest3.jpg');" onclick="zoomImage('fest3.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('sports1.jpg');" onclick="zoomImage('sports1.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('sports2.jpg');" onclick="zoomImage('sports2.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
                 </div>
             </div>
         </div>
 
-        <div class="container text-center mt-4">
-            <div class="row g-5 justify-content-center">
-                
-                
-                <div class="col-md-4">
-                    <div class="gallery-item card" style="background-image: url('sports3.jpg');" onclick="zoomImage('sports3.jpg')">
-                        <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
-                    </div>
+        <div class="row g-4 mt-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('fest1.jpg');" onclick="zoomImage('fest1.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
                 </div>
             </div>
-            <a href="#apply" class="btn btn-primary" style="margin-top: 15px;">See More</a></div>
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('fest2.jpg');" onclick="zoomImage('fest2.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('fest3.jpg');" onclick="zoomImage('fest3.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('sports1.jpg');" onclick="zoomImage('sports1.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
+                </div>
+            </div>
         </div>
-            
-    </section>
+
+        <div class="row g-4 mt-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery-item card" style="background-image: url('sports3.jpg');" onclick="zoomImage('sports3.jpg')">
+                    <span class="zoom-icon material-symbols-outlined">zoom_out_map</span>
+                </div>
+            </div>
+            <!-- Empty placeholders for alignment -->
+            <div class="col-md-3 col-sm-6"></div>
+            <div class="col-md-3 col-sm-6"></div>
+            <div class="col-md-3 col-sm-6"></div>
+        </div>
+
+        <a href="#apply" class="btn btn-primary mt-4">See More</a>
+    </div>
+</section>
+
+<style>
+    .gallery-item {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+    }
+    .zoom-icon {
+        font-size: 24px;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 50%;
+    }
+</style>
+
     <!-- 🔹 Image Zoom Modal -->
 <div id="zoomModal" class="modal" onclick="closeZoom()">
     <img id="zoomedImage" class="modal-content">
