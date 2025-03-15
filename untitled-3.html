@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Overview</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+         .navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+}
+        /* Custom Styles */
+        .hero-section {
+            background: url('school3.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Ensuring equal height for cards */
+.info-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px; /* Ensures equal height */
+}
+
+/* Curtain Effect */
+.curtain {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0 15px;
+    text-align: justify;
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+    flex-grow: 1; /* Ensures space adjustment */
+}
+
+
+
+        .info-box.active .curtain {
+            max-height: 150px; /* Adjust this height based on content */
+            padding: 15px;
+            overflow-y: scroll;
+        }
+
+        .show-more-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+            margin-top: auto;
+        }
+
+        .show-more-btn:hover {
+            background-color: #0056b3;
+        }
+        .cta-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+        .cta-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo and Company Name on the Left -->
+        <a class="navbar-brand" href="#">
+            <img src="speaker.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            School
+        </a>
+        
+        <!-- Navbar Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links on the Right -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\HDD\lab project\school\Untitled-1.html">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\HDD\lab project\school\Untitled-5.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="D:\HDD\lab project\school\Untitled-3.html" id="dropdownMenuButton" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Academics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-3.html">Admission Overview</a></li>
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-4.html">Academics Philosophy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="D:\HDD\lab project\school\Untitled-2.html" id="dropdownMenuButton" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-2.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-6.html">Events</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4 fw-bold">Admissions Overview</h1>
+            <p class="lead">Explore our admission process and take the first step toward your future.</p>
+            <a href="apply.html" class="cta-btn">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Admission Details -->
+    <section class="container my-5">
+        <div class="row text-center">
+
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-box p-4">
+                    <h4>Why to choose us?</h4>
+                    <p class="text-muted">We provide quality education, world-class faculty, and a vibrant campus life.</p>
+                    <div class="curtain">
+                        <p>We offer state-of-the-art labs, excellent faculty, and career guidance programs.</p>
+                    </div>
+                    <button class="show-more-btn" onclick="toggleCurtain(this)">Show More</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="info-box p-4">
+                    <h4>Eligibility Criteria</h4>
+                    <p class="text-muted">Check if you meet the requirements for enrollment.</p>
+                    <div class="curtain">
+                        <p>To apply, you need a minimum GPA of 3.0 and relevant coursework in your chosen field.</p>
+                    </div>
+                    <button class="show-more-btn" onclick="toggleCurtain(this)">Show More</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-box p-4">
+                    <h4>Application Process</h4>
+                    <p class="text-muted">A step-by-step guide on how to apply for admission.</p>
+                    <div class="curtain">
+                        <p>Submit your application, upload necessary documents, and schedule an interview.</p>
+                    </div>
+                    <button class="show-more-btn" onclick="toggleCurtain(this)">Show More</button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+
+    <div class="container my-5" data-aos="fade-up">
+        <h2 class="text-center mb-4">Admission Details</h2>
+        
+        <div class="row">
+            <!-- Required Documents -->
+            <div class="col-md-4">
+                <div class="info-box">
+                    <h4>Required Documents</h4>
+                    <p>Ensure you have all the necessary documents, including transcripts, ID proof, and application forms.</p>
+                    <button class="show-more-btn" onclick="toggleCurtain(this)">Show More</button>
+                    <div class="curtain">
+                        <p> <ol><li>Birth Certificate Copy (Original or Attested)</li>
+                            <li>Original TC Form</li>
+                            <li>Previous Class Report Card</li>
+                            <li>Two Passport size Photographs of Student</li>
+                            <li>Parents Id</li>
+                            <li>Student’s Aadhar form (Self attested copy)</li></ol></p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Tuition & Fees -->
+            <div class="col-md-4">
+                <div class="info-box">
+                    <h4>Tuition & Fees</h4>
+                    <p>Understand the fee structure, payment methods, and financial obligations.</p>
+                    <button class="show-more-btn" onclick="toggleCurtain(this)">Show More</button>
+                    <div class="curtain">
+                        <p><ol>
+                            <li> Admission fees : Class LKG to VIII 1000 Rs. & Class IX to XI 2000 Rs.</li>
+                            <li>5% concession on tuition fee will be given on up-front deposition of I Year fee.</li>
+                            <li>Mode of Payment Challan / Cheque ( Admission Fee, Tuition Fees)</li>
+                        </ol></p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Scholarships & Financial Aid -->
+            <div class="col-md-4">
+                <div class="info-box">
+                    <h4>Scholarships & Financial Aid</h4>
+                    <p>Explore scholarship opportunities and financial assistance programs.</p>
+                    <button class="show-more-btn" onclick="toggleCurtain(this)">Show More</button>
+                    <div class="curtain">
+                        <p>Eligibility criteria, application process, and deadlines for financial aid.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row mt-4">
+            <!-- International Student Guidelines -->
+            <div class="col-md-6">
+                <div class="info-box">
+                    <h4>International Student Guidelines</h4>
+                    <p>Special guidelines for international students, visa requirements, and support services.</p>
+                    <button class="show-more-btn" onclick="toggleCurtain(this)">Show More</button>
+                    <div class="curtain">
+                        <p>Information on student visas, accommodation, and cultural adaptation.</p>
+                    </div>
+                </div>
+            </div>
+    
+                <div class="col-md-6">
+                    <div class="info-box">
+                <h4 class="text-center mb-4">Admission FAQ</h4>
+                <p>Find answers to common admission-related questions.</p>
+                <button class="show-more-btn" onclick="toggleCurtain(this)">Show More</button>
+
+                <div class="faq-box curtain">
+                    <div class="faq-item">
+                        <button class="faq-question">📅 What are the admission deadlines?</button>
+                        <div class="faq-answer">
+                            <p>Admission deadlines vary based on the program. Typically, applications close by <strong>March 31st</strong> for the Fall intake and <strong>September 30th</strong> for the Spring intake.</p>
+                        </div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <button class="faq-question">💰 How can I apply for financial aid?</button>
+                        <div class="faq-answer">
+                            <p>To apply for financial aid, submit the <strong>Financial Assistance Form</strong> along with your admission application. You may also need to provide income proof and supporting documents.</p>
+                        </div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <button class="faq-question">🎓 What are the eligibility criteria for scholarships?</button>
+                        <div class="faq-answer">
+                            <p>Scholarships are awarded based on academic excellence, leadership skills, and extracurricular activities. Some scholarships also consider financial need. Visit our <a href="#">Scholarship Page</a> for details.</p>
+                        </div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <button class="faq-question">📄 What documents are required for admission?</button>
+                        <div class="faq-answer">
+                            <p>The required documents include transcripts, ID proof, passport-sized photographs, and recommendation letters. International students may need additional documents like an English proficiency test score.</p>
+                        </div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <button class="faq-question">🌍 Are there special guidelines for international students?</button>
+                        <div class="faq-answer">
+                            <p>Yes! International students need to follow visa guidelines, provide proof of English proficiency (TOEFL/IELTS), and submit financial statements for visa processing. Visit our <a href="#">International Students Guide</a> for more details.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+<style>
+    .faq-box {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    outline: none;
+}
+
+.faq-question:hover {
+    background: #0056b3;
+}
+
+.faq-answer {
+    background: #ffffff;
+    padding: 10px 16px;
+    display: none;
+    color:black;
+    border-top: 1px solid #ddd;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-answer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+</style>            
+        </div>
+    </div>
+    
+
+
+    <!-- Contact & More Info -->
+    <section class="container my-5 text-center">
+        <h2 class="mb-4">Need Assistance?</h2>
+        <p class="lead">Contact our admissions team for any queries regarding the application process.</p>
+        <a href="contact.html" class="cta-btn">Contact Us</a>
+    </section>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+        }
+    
+        .footer {
+            background-color: #222;
+            color: white;
+            padding: 50px 20px;
+        }
+    
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+    
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    
+        .footer-desc {
+            font-size: 14px;
+            color: #bbb;
+        }
+    
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+    
+        .footer-links a:hover {
+            color: #f4a261;
+        }
+    
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+    
+        .footer-social a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+    
+        .footer-social a:hover {
+            color: #f4a261;
+        }
+    
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #bbb;
+        }
+    
+        @media (max-width: 600px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+    
+            .footer-social {
+                justify-content: center;
+            }
+        }
+    </style>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo & Description -->
+            <div>
+                <div class="footer-logo">YourBrand</div>
+                <p class="footer-desc">Building innovative solutions for a better future.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div>
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+    
+            <!-- Social Media -->
+            <div>
+                <h4>Follow Us</h4>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+    
+            <div>
+                <h4>Contact Us</h4>
+                <div class="footer-links">
+                    <p>Contact: <a>+91 83029 96895</a></p>
+                        <p>Mail: <a>contact@torrlab.com</a></p>
+                        <Address>Address:- 130, Dhakka Nagar, Jaipur (Raj.)</Address>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            © 2025 YourBrand. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+function toggleCurtain(button) {
+            let card = button.parentElement;
+            card.classList.toggle("active");
+
+            // Toggle button text
+            if (card.classList.contains("active")) {
+                button.innerText = "Show Less";
+            } else {
+                button.innerText = "Show More";
+            }
+        }
+        document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+        const answer = button.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+    });
+});
+
+window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+
+    </script>
+
+</body>
+</html>

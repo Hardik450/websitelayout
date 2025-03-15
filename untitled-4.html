@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Philosophy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+         .navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+[data-aos] {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+        /* Custom Styling */
+        .academic-philosophy {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .philosophy-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .philosophy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo and Company Name on the Left -->
+        <a class="navbar-brand" href="#">
+            <img src="speaker.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            School
+        </a>
+        
+        <!-- Navbar Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links on the Right -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\HDD\lab project\school\Untitled-1.html">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\HDD\lab project\school\Untitled-5.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="D:\HDD\lab project\school\Untitled-3.html" id="dropdownMenuButton" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Academics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-3.html">Admission Overview</a></li>
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-4.html">Academics Philosophy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="D:\HDD\lab project\school\Untitled-2.html" id="dropdownMenuButton" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-2.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-6.html">Events</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Academic Philosophy Section -->
+    <section class="academic-philosophy">
+        <div class="container">
+            <h2 class="mb-4">📖 Academic Philosophy</h2>
+            <p class="lead mb-5">
+                At our institution, we believe that education is not just about imparting knowledge but about shaping 
+                <strong>critical thinkers, problem-solvers, and lifelong learners</strong>. Our philosophy revolves around
+                <strong>innovation, creativity, and holistic development</strong>.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="philosophy-card p-4">
+                        <h4>🔍 Inquiry-Based Learning</h4>
+                        <p>We promote curiosity-driven learning, where students <b>ask questions, explore concepts</b>, and develop a deeper understanding through <b>hands-on experiences</b>.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="philosophy-card p-4">
+                        <h4>🌱 Holistic Development</h4>
+                        <p>Education is more than textbooks. We focus on <b>cognitive, emotional, and social growth</b>, shaping well-rounded individuals ready to thrive.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="philosophy-card p-4">
+                        <h4>💡 Innovation & Technology</h4>
+                        <p>We integrate <b>modern tools, AI-driven learning, and digital resources</b> to ensure students are prepared for the evolving tech landscape.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="philosophy-card p-4">
+                        <h4>🌍 Global Perspective</h4>
+                        <p>Our curriculum fosters <b>global awareness, cultural sensitivity, and ethical leadership</b>, equipping students for an interconnected world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container my-5" data-aos="fade-up">
+        <h2 class="text-center mb-4">Curriculum Overview</h2>
+    
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-pills mb-3 justify-content-center" id="curriculumTabs">
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pre-primary">Pre-Primary</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#primary">Primary</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#middle">Middle</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#high-school">High School</button>
+            </li>
+        </ul>
+    
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Pre-Primary -->
+            <div class="tab-pane fade show active" id="pre-primary">
+                <h3>Pre-Primary Education</h3>
+                <p>Our Pre-Primary curriculum is designed to nurture young minds with interactive and engaging activities. It focuses on:</p>
+                <ul>
+                    <li>Language Development</li>
+                    <li>Basic Math Concepts</li>
+                    <li>Creative Arts & Music</li>
+                    <li>Social and Emotional Growth</li>
+                    <li>Physical Activities & Play-Based Learning</li>
+                </ul>
+            </div>
+    
+            <!-- Primary -->
+            <div class="tab-pane fade" id="primary">
+                <h3>Primary Education</h3>
+                <p>The Primary curriculum encourages curiosity and fundamental learning. It includes:</p>
+                <ul>
+                    <li>Comprehensive Language & Literature</li>
+                    <li>Foundational Mathematics & Science</li>
+                    <li>Hands-on Environmental Studies</li>
+                    <li>Creative Thinking & Problem-Solving</li>
+                    <li>Physical Education & Extracurricular Activities</li>
+                </ul>
+            </div>
+    
+            <!-- Middle -->
+            <div class="tab-pane fade" id="middle">
+                <h3>Middle School Education</h3>
+                <p>Middle school prepares students for deeper academic engagement. The subjects covered include:</p>
+                <ul>
+                    <li>Advanced Mathematics & Logical Reasoning</li>
+                    <li>Experimental Science & Technology</li>
+                    <li>Language & Communication Skills</li>
+                    <li>Social Sciences & Global Awareness</li>
+                    <li>Sports & Personality Development</li>
+                </ul>
+            </div>
+    
+            <!-- High School -->
+            <div class="tab-pane fade" id="high-school">
+                <h3>High School Education</h3>
+                <p>The High School curriculum prepares students for higher education and career paths. The focus areas include:</p>
+                <ul>
+                    <li>Specialized Subject Streams (Science, Commerce, Arts)</li>
+                    <li>Critical Thinking & Research Skills</li>
+                    <li>Career Guidance & Personal Development</li>
+                    <li>Internship & Project-Based Learning</li>
+                    <li>Sports, Arts & Cultural Enrichment</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="container my-5" data-aos="fade-up">
+        <h2 class="text-center mb-4">Special Programs</h2>
+        <p class="text-center text-muted">We offer specialized programs to foster students' talents in STEM, Arts, and Sports.</p>
+    
+        <div class="row g-4">
+            <!-- STEM Program -->
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="lab.jpg" alt="STEM Program" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="program-icon">⚙️</div>
+                        <h5 class="card-title mt-2">STEM Program</h5>
+                        <p class="card-text">Fostering innovation with hands-on experience in Science, Technology, Engineering, and Mathematics.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Arts Program -->
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="school2.jpg" alt="Arts Program" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="program-icon">🎨</div>
+                        <h5 class="card-title mt-2">Arts Program</h5>
+                        <p class="card-text">Encouraging creativity through fine arts, music, theater, and visual design.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Sports Program -->
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="school1.jpg" alt="Sports Program" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="program-icon">⚽</div>
+                        <h5 class="card-title mt-2">Sports Program</h5>
+                        <p class="card-text">Developing teamwork, leadership, and physical fitness through a variety of sports activities.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .program-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+        }
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .program-icon {
+            font-size: 40px;
+            color: #007bff;
+        }
+        .program-card img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+    
+
+
+    <div class="container my-5" data-aos="fade-up">
+        <h2 class="text-center mb-4">Our Teaching Methodology</h2>
+        <p class="text-center text-muted">We implement innovative teaching strategies that enhance learning experiences and student engagement.</p>
+    
+        <div class="row g-4">
+            <!-- Experiential Learning -->
+            <div class="col-md-4">
+                <div class="card method-card">
+                    <img src="lab.jpg" alt="Experiential Learning" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="method-icon">🎓</div>
+                        <h5 class="card-title mt-2">Experiential Learning</h5>
+                        <p class="card-text">Hands-on activities, project-based tasks, and real-world problem-solving to enhance learning.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Interactive Classroom -->
+            <div class="col-md-4">
+                <div class="card method-card">
+                    <img src="school1.jpg" alt="Interactive Classrooms" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="method-icon">📚</div>
+                        <h5 class="card-title mt-2">Interactive Classrooms</h5>
+                        <p class="card-text">Smart boards, discussions, and collaborative sessions to keep students engaged.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Personalized Learning -->
+            <div class="col-md-4">
+                <div class="card method-card">
+                    <img src="school2.jpg" alt="Personalized Learning" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="method-icon">🎯</div>
+                        <h5 class="card-title mt-2">Personalized Learning</h5>
+                        <p class="card-text">Tailored learning experiences that cater to individual student needs and abilities.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Technology Integration -->
+            <div class="col-md-4">
+                <div class="card method-card">
+                    <img src="school3.jpg" alt="Technology Integration" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="method-icon">💻</div>
+                        <h5 class="card-title mt-2">Technology Integration</h5>
+                        <p class="card-text">Blended learning using AI tools, virtual labs, and gamification to enhance education.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Critical Thinking & Creativity -->
+            <div class="col-md-4">
+                <div class="card method-card">
+                    <img src="speaker.jpg" alt="Critical Thinking" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="method-icon">🧠</div>
+                        <h5 class="card-title mt-2">Critical Thinking & Creativity</h5>
+                        <p class="card-text">Encouraging students to think critically, solve problems, and innovate.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Assessment & Feedback -->
+            <div class="col-md-4">
+                <div class="card method-card">
+                    <img src="school3.jpg" alt="Assessment & Feedback" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="method-icon">📊</div>
+                        <h5 class="card-title mt-2">Assessment & Feedback</h5>
+                        <p class="card-text">Regular evaluations and constructive feedback to improve student progress.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .method-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+        }
+        .method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .method-icon {
+            font-size: 40px;
+            color: #007bff;
+        }
+        .method-card img {
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>    
+    
+
+
+    <div class="container my-5" data-aos="fade-up">
+        <h2 class="text-center mb-4">Learning Resources & Library</h2>
+        <p class="text-center text-muted">A hub of knowledge with access to digital and physical learning materials for students and educators.</p>
+    
+        <div class="row g-4">
+            <!-- E-Books -->
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <img src="lab.jpg" alt="E-Books" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="resource-icon">📖</div>
+                        <h5 class="card-title mt-2">E-Books Collection</h5>
+                        <p class="card-text">Access thousands of e-books across various disciplines, available online for students.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Research Papers -->
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <img src="school1.jpg" alt="Research Papers" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="resource-icon">📑</div>
+                        <h5 class="card-title mt-2">Research Papers & Journals</h5>
+                        <p class="card-text">Explore academic research, journals, and articles to enhance your knowledge base.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Video Tutorials -->
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <img src="school2.jpg" alt="Video Tutorials" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="resource-icon">🎥</div>
+                        <h5 class="card-title mt-2">Video Tutorials</h5>
+                        <p class="card-text">Engaging and interactive video content covering multiple subjects and concepts.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Library Facilities -->
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <img src="school3.jpg" alt="Library Facilities" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="resource-icon">🏛️</div>
+                        <h5 class="card-title mt-2">Library Facilities</h5>
+                        <p class="card-text">A well-stocked library with reading rooms, research sections, and a digital archive.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Online Databases -->
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <img src="speaker.jpg" alt="Online Databases" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="resource-icon">💻</div>
+                        <h5 class="card-title mt-2">Online Databases</h5>
+                        <p class="card-text">Access research databases, online libraries, and digital learning portals.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Study Rooms -->
+            <div class="col-md-4">
+                <div class="card resource-card">
+                    <img src="speaker.jpg" alt="Study Rooms" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="resource-icon">📝</div>
+                        <h5 class="card-title mt-2">Study & Discussion Rooms</h5>
+                        <p class="card-text">Dedicated spaces for group study, research discussions, and academic collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .resource-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .resource-icon {
+            font-size: 40px;
+            color: #007bff;
+        }
+        .resource-card img {
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .footer {
+        background-color: #222;
+        color: white;
+        padding: 50px 20px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin-bottom: 8px;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #f4a261;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+        color: #f4a261;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #444;
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+    }
+</style>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo & Description -->
+        <div>
+            <div class="footer-logo">YourBrand</div>
+            <p class="footer-desc">Building innovative solutions for a better future.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+
+        <div>
+            <h4>Contact Us</h4>
+            <div class="footer-links">
+                <p>Contact: <a>+91 83029 96895</a></p>
+                    <p>Mail: <a>contact@torrlab.com</a></p>
+                    <Address>Address:- 130, Dhakka Nagar, Jaipur (Raj.)</Address>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        © 2025 YourBrand. All rights reserved.
+    </div>
+</footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+         AOS.init();
+        window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+    </script>
+    <!-- Bootstrap JS -->
+       <!-- AOS JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

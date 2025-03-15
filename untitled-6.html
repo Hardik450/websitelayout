@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Calendar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .event-card {
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            overflow: hidden;
+        }
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .event-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        .calendar-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .gallery img {
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+[data-aos] {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo and Company Name on the Left -->
+        <a class="navbar-brand" href="#">
+            <img src="speaker.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            School
+        </a>
+        
+        <!-- Navbar Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links on the Right -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\HDD\lab project\school\Untitled-1.html">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\HDD\lab project\school\Untitled-5.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="D:\HDD\lab project\school\Untitled-3.html" id="dropdownMenuButton" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Academics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-3.html">Admission Overview</a></li>
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-4.html">Academics Philosophy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="D:\HDD\lab project\school\Untitled-2.html" id="dropdownMenuButton" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-2.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-6.html">Events</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">📅 Events & Calendar</h2>
+    <p class="text-center text-muted">Stay updated with our latest events and activities.</p>
+
+    <!-- School Calendar -->
+    <div class="calendar-container my-5 text-center">
+        <h4>📆 School Calendar</h4>
+        <p class="text-muted">Check out our yearly schedule of activities.</p>
+        <a href="#" class="btn btn-primary">View Full Calendar</a>
+    </div>
+
+    <!-- Upcoming Events -->
+    <h4 class="my-4">🎉 Upcoming Events</h4>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card event-card">
+                <img src="event1.jpg" class="event-img" alt="Annual Day">
+                <div class="card-body">
+                    <h5 class="card-title">Annual Day Celebration</h5>
+                    <p class="text-muted">📅 Date: March 25, 2025</p>
+                    <p>Join us for a grand celebration of talents and achievements!</p>
+                    <a href="#" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card event-card">
+                <img src="event2.jpg" class="event-img" alt="Science Fair">
+                <div class="card-body">
+                    <h5 class="card-title">Science Fair 2025</h5>
+                    <p class="text-muted">📅 Date: April 10, 2025</p>
+                    <p>Experience innovation and creativity at our science fair.</p>
+                    <a href="#" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card event-card">
+                <img src="sports1.jpg" class="event-img" alt="Sports Day">
+                <div class="card-body">
+                    <h5 class="card-title">Sports Day</h5>
+                    <p class="text-muted">📅 Date: May 5, 2025</p>
+                    <p>Get ready for a thrilling day of athletic competitions!</p>
+                    <a href="#" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Past Events Gallery -->
+    <h4 class="my-5">📸 Past Events Gallery</h4>
+    <div class="row g-3 gallery">
+        <div class="col-md-3">
+            <img src="fest1.jpg" class="img-fluid" alt="Past Event 1">
+        </div>
+        <div class="col-md-3">
+            <img src="fest2.jpg" class="img-fluid" alt="Past Event 2">
+        </div>
+        <div class="col-md-3">
+            <img src="fest3.jpg" class="img-fluid" alt="Past Event 3">
+        </div>
+        <div class="col-md-3">
+            <img src="event3.jpg" class="img-fluid" alt="Past Event 4">
+        </div>
+    </div>
+
+    <!-- Call-to-Action -->
+    <div class="text-center my-4">
+        <h5 class="mb-3">Don't Miss Out on Our Exciting Events!</h5>
+        <a href="#" class="btn btn-primary">📅 View Full Calendar</a>
+    </div>
+</div>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .footer {
+        background-color: #222;
+        color: white;
+        padding: 50px 20px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin-bottom: 8px;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #f4a261;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+        color: #f4a261;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #444;
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+    }
+</style>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo & Description -->
+        <div>
+            <div class="footer-logo">YourBrand</div>
+            <p class="footer-desc">Building innovative solutions for a better future.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+
+        <div>
+            <h4>Contact Us</h4>
+            <div class="footer-links">
+                <p>Contact: <a>+91 83029 96895</a></p>
+                    <p>Mail: <a>contact@torrlab.com</a></p>
+                    <Address>Address:- 130, Dhakka Nagar, Jaipur (Raj.)</Address>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        © 2025 YourBrand. All rights reserved.
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+     AOS.init();
+    window.addEventListener("scroll", function () {
+let navbar = document.querySelector(".navbar");
+if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+} else {
+    navbar.classList.remove("scrolled");
+}
+});
+window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <script src="https://kit.fontawesome.com/6623d20740.js" crossorigin="anonymous"></script>
+<style>
+    
+    .navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+[data-aos] {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo and Company Name on the Left -->
+        <a class="navbar-brand" href="#">
+            <img src="speaker.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            School
+        </a>
+        
+        <!-- Navbar Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links on the Right -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\HDD\lab project\school\Untitled-1.html">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\HDD\lab project\school\Untitled-5.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="D:\HDD\lab project\school\Untitled-3.html" id="dropdownMenuButton" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Academics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-3.html">Admission Overview</a></li>
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-4.html">Academics Philosophy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="D:\HDD\lab project\school\Untitled-2.html" id="dropdownMenuButton" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-2.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="D:\HDD\lab project\school\Untitled-6.html">Events</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section class="container my-5" data-aos="fade-up">
+    <div class="row align-items-center">
+        <!-- History Text Section -->
+        <div class="col-lg-6">
+            <h2 class="mb-4">Our History</h2>
+            <p>
+                Established in [Year], our school has been a center of academic excellence, shaping young minds 
+                and nurturing future leaders. Over the years, we have built a strong foundation of knowledge, 
+                discipline, and innovation. Our commitment to education continues to inspire generations.
+            </p>
+        </div>
+
+        <!-- School Image Section -->
+        <div class="col-lg-6 text-center">
+            <img src="school3.jpg" alt="School Image" class="img-fluid rounded shadow-lg">
+        </div>
+    </div>
+</section>
+
+
+<section class="container my-5 text-center" data-aos="fade-up">
+    <h2 class="mb-4">Our Mission & Vision</h2>
+    <div class="row justify-content-center">
+        <!-- Mission Card -->
+        <div class="col-md-5 mx-2 p-4 shadow-lg rounded bg-light card">
+            <i class="fas fa-bullseye fa-3x text-primary mb-3"></i>
+            <h4>Our Mission</h4>
+            <p>
+                Our mission is to provide quality education that fosters critical thinking, innovation, and 
+                leadership in students, preparing them for a bright and successful future.
+            </p>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="col-md-5 mx-2 p-4 shadow-lg rounded bg-light card">
+            <i class="fas fa-eye fa-3x text-success mb-3"></i>
+            <h4>Our Vision</h4>
+            <p>
+                Our vision is to create a world-class learning environment where students are empowered 
+                to explore their potential, embrace lifelong learning, and contribute to society.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="container my-5 text-center" data-aos="fade-up">
+    <h2 class="mb-4">Our Core Values</h2>
+    <div class="d-flex justify-content-between flex-wrap">
+        <!-- Integrity -->
+        <div class="p-4 shadow-lg rounded bg-light text-center card" style="width: 30%;">
+            <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+            <h4>Integrity</h4>
+            <p>We uphold honesty and strong moral principles in everything we do.</p>
+        </div>
+
+        <!-- Excellence -->
+        <div class="p-4 shadow-lg rounded bg-light text-center card" style="width: 30%;">
+            <i class="fas fa-star fa-3x text-warning mb-3"></i>
+            <h4>Excellence</h4>
+            <p>We strive for the highest standards in academics and personal growth.</p>
+        </div>
+
+        <!-- Innovation -->
+        <div class="p-4 shadow-lg rounded bg-light text-center card" style="width: 30%;">
+            <i class="fas fa-lightbulb fa-3x text-success mb-3"></i>
+            <h4>Innovation</h4>
+            <p>We embrace creativity and new ideas to solve challenges.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="container my-5 text-center" data-aos="fade-up">
+    <h2 class="mb-4">Leadership & Faculty</h2>
+    <div class="row justify-content-center">
+        <!-- Leadership -->
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card shadow-lg">
+                <img src="speaker.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 80px; height: 80px;" alt="Leader 1">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. John Doe</h5>
+                    <p class="card-text text-muted">Principal</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card shadow-lg">
+                <img src="speaker.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 80px; height: 80px;" alt="Leader 2">
+                <div class="card-body">
+                    <h5 class="card-title">Ms. Jane Smith</h5>
+                    <p class="card-text text-muted">Vice Principal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Faculty Section -->
+    <div class="row justify-content-center">
+        <!-- Faculty Member 1 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card shadow-lg">
+                <img src="speaker.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 80px; height: 80px;" alt="Faculty 1">
+                <div class="card-body">
+                    <h5 class="card-title">Mr. Alan Brown</h5>
+                    <p class="card-text text-muted">Head of Science Dept.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Faculty Member 2 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card shadow-lg">
+                <img src="speaker.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 80px; height: 80px;" alt="Faculty 2">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. Sarah White</h5>
+                    <p class="card-text text-muted">Senior Mathematics Lecturer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Faculty Member 3 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card shadow-lg">
+                <img src="speaker.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 80px; height: 80px;" alt="Faculty 3">
+                <div class="card-body">
+                    <h5 class="card-title">Prof. Mark Wilson</h5>
+                    <p class="card-text text-muted">Physics Lecturer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Faculty Member 4 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card shadow-lg">
+                <img src="speaker.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 80px; height: 80px;" alt="Faculty 4">
+                <div class="card-body">
+                    <h5 class="card-title">Ms. Emily Davis</h5>
+                    <p class="card-text text-muted">Computer Science Lecturer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container my-5 text-center" data-aos="fade-up">
+    <h2 class="mb-4">Our Facilities</h2>
+    <div class="row justify-content-center">
+        <!-- Facility 1 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-lg p-3">
+                <img src="library.jpg" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Library">
+                <div class="card-body">
+                    <h5 class="card-title">Well-Stocked Library</h5>
+                    <p class="card-text text-muted">A vast collection of books, research papers, and digital resources for students.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facility 2 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-lg p-3">
+                <img src="chemistry.jpg" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Science Lab">
+                <div class="card-body">
+                    <h5 class="card-title">Modern Science Labs</h5>
+                    <p class="card-text text-muted">Fully equipped physics, chemistry, and biology labs for hands-on learning.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facility 3 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-lg p-3">
+                <img src="sports1.jpg" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Sports">
+                <div class="card-body">
+                    <h5 class="card-title">Sports & Playgrounds</h5>
+                    <p class="card-text text-muted">Large fields and courts for basketball, football, cricket, and athletics.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facility 4 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-lg p-3">
+                <img src="computer.jpg" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Computer Lab">
+                <div class="card-body">
+                    <h5 class="card-title">Advanced Computer Lab</h5>
+                    <p class="card-text text-muted">High-tech computer labs with the latest software and internet access.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facility 5 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-lg p-3">
+                <img src="auditorium.jpg" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Auditorium">
+                <div class="card-body">
+                    <h5 class="card-title">Spacious Auditorium</h5>
+                    <p class="card-text text-muted">A large hall for events, seminars, and cultural programs.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facility 6 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-lg p-3">
+                <img src="cafeteria.jpg" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Cafeteria">
+                <div class="card-body">
+                    <h5 class="card-title">Hygienic Cafeteria</h5>
+                    <p class="card-text text-muted">Healthy and delicious meals served in a clean dining environment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .footer {
+        background-color: #222;
+        color: white;
+        padding: 50px 20px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin-bottom: 8px;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #f4a261;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+        color: #f4a261;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #444;
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+    }
+</style>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo & Description -->
+        <div>
+            <div class="footer-logo">YourBrand</div>
+            <p class="footer-desc">Building innovative solutions for a better future.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+
+        <div>
+            <h4>Contact Us</h4>
+            <div class="footer-links">
+                <p>Contact: <a>+91 83029 96895</a></p>
+                    <p>Mail: <a>contact@torrlab.com</a></p>
+                    <Address>Address:- 130, Dhakka Nagar, Jaipur (Raj.)</Address>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        © 2025 YourBrand. All rights reserved.
+    </div>
+</footer>
+
+<!-- Bootstrap JS (Required for Navbar Functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+    window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+    </script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init(); // Initialize AOS
+    </script>
+    
+</body>
+</html>
