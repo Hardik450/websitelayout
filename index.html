@@ -128,15 +128,18 @@ button:hover {
         </div>
     </nav>
     
-    <div class="hero-container">
+       <div class="hero-container">
+        <!-- Video Section -->
         <div class="video-section">
             <video src="school tour.mp4" autoplay muted loop></video>
             <div class="overlay">
-                <h3 class="display-4">Welcome to Shri Mahveer International School</h3>
+                <h3 class="display-9">Welcome to Shri Mahveer International School</h3>
                 <p class="lead">Empowering students through excellence in education.</p>
                 <a href="#apply" class="btn btn-primary">Apply Now</a>
             </div>
         </div>
+    
+        <!-- Announcement Section -->
         <div class="announcement-section">
             <h3>News & Announcements</h3>
             <div class="announcement-item">🚀 New feature update: Dark mode is now available!</div>
@@ -144,84 +147,97 @@ button:hover {
             <div class="announcement-item">⚡ Limited-time offer: Get 20% off on all premium plans.</div>
         </div>
     </div>
+    
+    <!-- Updated CSS -->
     <style>
-        /* Hero Container */
-.hero-container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 70vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Video Section */
-.video-section {
-    position: relative;
-    width: 70%;
-    height: 100%;
-}
-
-.video-section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire area */
-    border-radius: 10px;
-}
-
-/* Overlay Text */
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-13%, -50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Announcement Section */
-.announcement-section {
-    width: 20%;
-    height: 70vh;
-    background-color: #ffeb3b;
-    overflow-y: auto;
-    color: red;
-    padding: 20px;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
-/* Announcements */
-.announcement-item {
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: white;
-    border-radius: 5px;
-    font-size: 1.1rem;
-}
-
-/* Mobile Responsive */
-@media (max-width: 992px) {
+    /* Hero Container */
     .hero-container {
-        flex-direction: column;
-        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+        width: 100%;
+        gap: 15px; /* Space between sections */
     }
-
+    
+    /* Video Section */
     .video-section {
-        width: 100%;
-        height: auto;
+        position: relative;
+        width: 70%;
+        height: 100%;
     }
-
-    .announcement-section {
+    
+    .video-section video {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* Shrunk Overlay Text Box */
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
         padding: 15px;
+        width: 60%;  /* Reduced Width */
+        border-radius: 10px;
     }
-}
-
+    
+    /* Announcement Section */
+    .announcement-section {
+        width: 25%;
+        height: 70vh;
+        background-color: #ffeb3b;
+        overflow-y: auto;
+        color: red;
+        padding: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    
+    /* Announcements */
+    .announcement-item {
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+        border-radius: 5px;
+        font-size: 1.1rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .hero-container {
+            flex-direction: column;
+            height: auto;
+        }
+    
+        .video-section {
+            width: 100%;
+            height: auto;
+        }
+    
+        .overlay {
+            width: 80%;  /* Adjusted for Mobile */
+            padding: 10px;
+        }
+    
+        .announcement-section {
+            width: 100%;
+            height: auto;
+            padding: 15px;
+            text-align: center;
+        }
+    
+        .announcement-item {
+            font-size: 1rem;
+        }
+    }
     </style>
         
       <!-- <div class="container p-3 mb-5 bg-body-tertiary rounded shadow-lg" style="margin-top: 30px;">
